@@ -5,3 +5,4 @@ en:
       deletion_success: 'Book Deleted Successfully'
       deletion_failure: 'Book Deletion Failed'
       creation_failure: 'Book Creation Failed'
+      updation_success: 'Book Updated Successfully'
