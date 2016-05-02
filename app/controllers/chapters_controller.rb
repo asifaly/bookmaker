@@ -19,7 +19,7 @@ class ChaptersController < ApplicationController
     @chapter.destroy
   end
 
-private
+  private
 
   def chapter_params
     params.require(:chapter).permit(:title, :notes)
