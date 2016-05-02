@@ -1,0 +1,8 @@
+hi:
+  flash_msgs:
+    books:
+      creation_success: 'Book created successfully(hindi)'
+      creation_failure: 'Book creation failed (hindi)'
+      deletion_success: 'Book deleted successfully(hindi)'
+      deletion_failure: 'Book deletion failed (hindi)'
+      updation_success: 'Book updated successfully(hindi)'

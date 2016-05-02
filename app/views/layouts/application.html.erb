@@ -8,8 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= render 'common/header' unless landing_page? %>
+  <%= flash_messages_tag %>
+  <div class="<%= 'container' unless landing_page? %>">
 <%= yield %>
-
+  </div>
+  <%= render 'common/footer' unless landing_page? %>
 </body>
 </html>

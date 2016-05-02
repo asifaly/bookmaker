@@ -1,0 +1,6 @@
+<%= simple_form_for [chapter.book, chapter], html: {id: "new-chapter-form"}, remote: true do |f| %>
+  <%= f.input :title %>
+  <%= f.input :notes %>
+  <%= f.submit class: "btn btn-primary btn" %>
+  <%= link_to("Cancel", "#", class: 'btn btn-danger', id: "cancel-chapter-form") if chapter.new_record? %>
+<% end %>
