@@ -1,12 +1,15 @@
 <div class="container-fluid">
 <%= link_to "Add new Book", new_book_path, class: "btn btn-success pull-right" %>
-<h1>Make a Book</h1>
+<h1>Choose a book to contribute to</h1>
 </div>
 <div class="container-fluid">
   <div class="row" id="books">
     <% @books.each do |book| %>
       <div class="col-md-4 book">
-        <h3><%= link_to book.title, book_path(book) %></h3>
+        <div class="well">
+          <h3><%= link_to book.title, book_path(book) %></h3>
+          <p><%= book.notes %></p>
+        </div>
       </div>
     <% end %>
   </div>
