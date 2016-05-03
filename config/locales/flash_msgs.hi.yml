@@ -6,3 +6,5 @@ hi:
       deletion_success: 'Book deleted successfully(hindi)'
       deletion_failure: 'Book deletion failed (hindi)'
       updation_success: 'Book updated successfully(hindi)'
+    sections:
+      creation_failure: 'Section could not be created(hindi)'

@@ -32,8 +32,12 @@ class BooksController < ApplicationController
   end
 
   def show
-    @chapters = @book.chapters.all
+    @chapters = @book.chapters.includes(:sections).all
     @new_chapter = @book.chapters.new
+    @new_sections = {}
+    @chapters.each do |chapter|
+      @new_sections[chapter.id] = chapter.sections.new
+    end
   end
 
   def destroy

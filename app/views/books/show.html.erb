@@ -9,9 +9,9 @@
   </div>
   <div id="sidebar" class="col-md-4 col-md-pull-8">
 
-    <ul id="chapters-list">
+    <div id="chapters-list">
       <%= render @chapters %>
-    </ul>
+    </div>
     <%= link_to "+ Add New Chapter", '#', id: 'trigger-new-chapter-form', class: 'btn btn-success' %>
 
     <%= render partial: 'chapters/form', locals: {chapter: @new_chapter} %>

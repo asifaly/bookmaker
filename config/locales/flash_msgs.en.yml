@@ -6,3 +6,5 @@ en:
       deletion_failure: 'Book Deletion Failed'
       creation_failure: 'Book Creation Failed'
       updation_success: 'Book Updated Successfully'
+    sections:
+      creation_failure: 'Section could not be created'
