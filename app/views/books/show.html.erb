@@ -1,4 +1,4 @@
-<section id="book" class="row">
+<section id="book" class="row" data-book-id="<%= @book.id %>">
   <div id="book-content" class="col-md-8 col-md-push-4">
 
     <%= link_to fa_icon('trash', text:"Delete"),"#", class: "btn btn-danger pull-right", data: {toggle: "modal", target: "#delete-confirmation-modal"} %>
@@ -14,11 +14,12 @@
     <div id="chapters-list">
       <%= render @chapters %>
     </div>
-    <%= link_to "+ Add New Chapter", '#', id: 'trigger-new-chapter-form', class: 'btn btn-success' %>
+    <%= link_to "+ Add New Chapter", '#',id: 'trigger-new-chapter-form', class: 'btn btn-success' %>
 
     <%= render partial: 'chapters/form', locals: {chapter: @new_chapter} %>
   </div>
 </section>
+
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="delete-confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

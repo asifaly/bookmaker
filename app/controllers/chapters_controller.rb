@@ -19,6 +19,20 @@ class ChaptersController < ApplicationController
     @chapter.destroy
   end
 
+  def sort
+    ordered_chapters = JSON.parse(params[:chapter_ids])
+    @grouped_chapters = @book.chapters.where(id: ordered_chapters).group_by(&:id)
+    index_no = 1
+    ordered_chapters.each do |chapter_id|
+      chapter_id = chapter_id.to_i
+      chapter = @grouped_chapters[chapter_id][0]
+      chapter.update_attribute(:position, index_no)
+
+      index_no += 1
+    end
+    render nothing: true
+  end
+
   private
 
   def chapter_params
