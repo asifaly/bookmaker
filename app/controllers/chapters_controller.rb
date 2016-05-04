@@ -5,6 +5,7 @@ class ChaptersController < ApplicationController
   def create
     @chapter = @book.chapters.new(chapter_params)
     @save_success = !!@chapter.save
+    @new_sections = { @chapter.id => @chapter.sections.new }
   end
 
   def edit

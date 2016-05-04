@@ -14,7 +14,7 @@
     <div id="chapters-list">
       <%= render @chapters %>
     </div>
-    <%= link_to "+ Add New Chapter", '#',id: 'trigger-new-chapter-form', class: 'btn btn-success' %>
+    <%= link_to "+ Add New Chapter", '#',id: 'trigger-new-chapter-form' %> 
 
     <%= render partial: 'chapters/form', locals: {chapter: @new_chapter} %>
   </div>
