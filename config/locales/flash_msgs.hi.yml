@@ -8,3 +8,5 @@ hi:
       updation_success: 'Book updated successfully(hindi)'
     sections:
       creation_failure: 'Section could not be created(hindi)'
+    chapters:
+      deletion_failure: 'Chapter cannot be deleted, Delete the Sections first(hindi)'

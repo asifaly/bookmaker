@@ -18,7 +18,12 @@ class ChaptersController < ApplicationController
   end
 
   def destroy
-    @chapter.destroy
+    if @chapter.sections.any?
+      flash[:danger] = I18n.t('flash_msgs.chapters.deletion_failure')
+      @destroy_failure = true
+    else
+      @chapter.destroy
+    end
   end
 
   private
