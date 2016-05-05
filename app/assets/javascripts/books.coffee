@@ -14,10 +14,11 @@ SorterUtils =
   saveSortOrder: ->
     $.ajax
       method: 'PUT'
-      url: "/books/#{$('#book')[0].dataset.bookId}/chapters/sort"
+      url: "/books/#{$('#book')[0].dataset.bookId}"
       dataType: 'script'
       data:
-        chapter_ids: SorterUtils.orderedChapters()
+        book:
+          sorted_chapter_ids: SorterUtils.orderedChapters()
   init: ->
     $('#chapters-list').sortable
       handle: '.fa-bars'
