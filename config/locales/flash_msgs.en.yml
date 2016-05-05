@@ -8,5 +8,7 @@ en:
       updation_success: 'Book Updated Successfully'
     sections:
       creation_failure: 'Section could not be created'
+      deletion_failure: 'Section could not be deleted, you entered wrong title'
+      deletion_success: 'Section deleted successfully'
     chapters:
       deletion_failure: 'Chapter contains sections, cannot be deleted. Delete Sections first'

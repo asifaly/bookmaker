@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  has_many :chapters, dependent: destroy
+  has_many :chapters, dependent: :destroy
   validates :title, presence: true
   
   def sorted_chapter_ids=(ids_array)
