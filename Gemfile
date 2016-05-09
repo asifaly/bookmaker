@@ -28,6 +28,8 @@ group :development do
   gem 'guard-rails', require: false
   gem 'guard-livereload', require: false
   gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do

@@ -7,7 +7,7 @@
     <%= chapter.title %>
   <% end %>
 <div class="sections">
-  <div class="sections-list">
+  <div class="sections-list" data-chapter-id="<%= chapter.id %>">
     <%= render chapter.sections %>
   </div>
     <%= link_to "+ Add Section", "#", data: {toggle: "modal", target: "#new-section-modal-#{chapter.id}"} %>
