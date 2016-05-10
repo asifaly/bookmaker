@@ -1,2 +1,4 @@
 $('a[href="#section-preview"]').tab('show');
 $('#section-preview').html('<%= j render("sections/section_preview") %>');
+$('#editform').hide()
+$('#<%= dom_id @section %>').replaceWith('<%= j render("sections/section_header") %>')

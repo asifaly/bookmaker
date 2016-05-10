@@ -1,0 +1,14 @@
+<div id="<%= dom_id @section %>">
+<h2>
+  <%= @section.title %>
+  <small>
+    <em>in</em>
+    <%= @chapter.title %>
+    <%= link_to fa_icon('pencil'), edit_book_chapter_section_path(@book, @chapter, @section), class: "text-primary", remote: true %>
+    <%= link_to fa_icon('trash'), "#", class: "text-danger", data: {toggle: "modal", target: "#section-delete-confirmation-modal"} %>
+  </small>
+</h2>
+<p>
+<%= @section.notes %>
+</p>
+</div>

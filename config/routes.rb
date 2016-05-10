@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'translate' => "welcome#translate", as: :translate
   resources :books do
     resources :chapters, only: [:create, :edit, :update, :destroy] do
-      resources :sections, only: [:create, :show, :update, :destroy]
+      resources :sections, only: [:create, :edit, :show, :update, :destroy]
     end
   end
   # Example of regular route:

@@ -1,14 +1,7 @@
-<h2>
-  <%= @section.title %>
-  <small>
-    <em>in</em>
-    <%= @chapter.title %>
-    <%= link_to fa_icon('trash'), "#", class: "text-danger", data: {toggle: "modal", target: "#section-delete-confirmation-modal"} %>
-  </small>
-</h2>
-<p>
-<%= @section.notes %>
-</p>
+<%= render 'sections/section_header' %>
+<div id="editform">
+<%= render 'sections/form' %>
+</div>
 
 <div>
   <!-- Nav tabs -->

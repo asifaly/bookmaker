@@ -1,10 +1,13 @@
 class SectionsController < ApplicationController
   before_action :fetch_chapter
-  before_action :fetch_section, only: [:show, :update, :destroy]
+  before_action :fetch_section, only: [:show, :update, :destroy, :edit]
 
   def create
     @section = @chapter.sections.new(section_params)
     @save_success = @section.save
+  end
+
+  def edit
   end
 
   def show
