@@ -7,6 +7,19 @@ class Chapter < ActiveRecord::Base
 
    default_scope {order(position: :asc)}
 
+  def sorted_section_ids=(ids_array)
+    ids_array = JSON.parse(ids_array)
+    grouped_sections = self.sections.where(id: ids_array).group_by(&:id)
+    index_no = 1
+    ids_array.each do |section_id|
+      section_id = section_id.to_i
+      section = grouped_sections[section_id][0]
+      section.update_attribute(:position, index_no)
+
+      index_no += 1
+    end
+  end
+
    private
 
    def set_position

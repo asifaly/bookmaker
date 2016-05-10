@@ -12,9 +12,15 @@ class ChaptersController < ApplicationController
   end
 
   def update
-    @chapter.update_attributes(chapter_params)
-    @chapter.reload unless @chapter.valid?
-    @new_sections = { @chapter.id => @chapter.sections.new }
+    if @chapter.update_attributes(chapter_params)
+      if params[:chapter][:sorted_section_ids]
+        debugger
+        render nothing: true
+      else
+        @chapter.reload unless @chapter.valid?
+        @new_sections = { @chapter.id => @chapter.sections.new }
+      end
+    end
   end
 
   def destroy
@@ -29,7 +35,7 @@ class ChaptersController < ApplicationController
   private
 
   def chapter_params
-    params.require(:chapter).permit(:title, :notes)
+    params.require(:chapter).permit(:title, :notes, :sorted_section_ids)
   end
 
   def fetch_book

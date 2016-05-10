@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504071044) do
+ActiveRecord::Schema.define(version: 20160509192805) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 20160504071044) do
     t.integer  "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "position"
   end
 
   add_index "sections", ["chapter_id"], name: "index_sections_on_chapter_id"
+  add_index "sections", ["position"], name: "index_sections_on_position"
 
 end
