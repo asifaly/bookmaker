@@ -13,12 +13,14 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
   gem 'thin'
+  gem 'letter_opener'
 end
 
 group :development do
@@ -28,6 +30,7 @@ group :development do
   gem 'guard-rails', require: false
   gem 'guard-livereload', require: false
   gem 'spring'
+  gem 'meta_request'
 end
 
 group :production do
